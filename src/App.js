@@ -10,6 +10,7 @@ import {useState, useEffect} from 'react'
 import SearchProductsForm from './components/searchProductsForm';
 import Checkout from './containers/Checkout'
 import Alert from 'react-bootstrap/Alert'
+import Button from 'react-bootstrap/Button'
 
 function App() {
   const [products,setProducts] = useState([])
@@ -19,7 +20,6 @@ function App() {
   const [loggedIn,setLoggedIn] = useState(false)
 
   const addToCart = (item,quantity) =>{
-    user.ordered = false
     const newArr = new Array(parseInt(quantity)).fill(item)
     console.log(newArr)
     setUser({...user,cart: user.cart.concat(newArr)})
@@ -65,8 +65,9 @@ function App() {
         </Nav>
       </Navbar>
 
-      <Alert show={user.ordered === true} variant='success' className='text-center m-2'>
-        <Alert.Heading>Order Successful</Alert.Heading>
+      <Alert show={user.ordered === true} variant='success' className='m-2 d-flex'>
+        <Alert.Heading className='mx-auto'>Order Successful</Alert.Heading>
+        <Button variant="outline-dark" onClick={()=>setUser({...user,ordered:false})}>Close</Button>
       </Alert>
 
       <Switch>
