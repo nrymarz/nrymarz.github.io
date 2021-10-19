@@ -4,7 +4,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 export default function SearchProductsForm({query,setQuery}){
     const searchProduct = (e)=>{
-        window.location.href = "http://localhost:3000/products"
+        window.location.href = "/products"
     }
     return(
         <Form className='my-1' style={{width:"100%"}} onSubmit={searchProduct}>
