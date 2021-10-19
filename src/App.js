@@ -51,8 +51,8 @@ function App() {
   return (
     <main>
       <Navbar bg='dark' variant='dark' className="p-2 pb-2">
-        <Navbar.Brand className="mx-3">Nathan's Online Shop</Navbar.Brand>
-        <Container fluid className='w-75'>
+        <Navbar.Brand className="ms-3">Nathan's Online Shop</Navbar.Brand>
+        <Container fluid className='w-75 mx-auto'>
           <SearchProductsForm query={query} setQuery={setQuery}/>
         </Container>
         <Nav className="mx-3 justify-content-around" style={{width:"275px"}}>

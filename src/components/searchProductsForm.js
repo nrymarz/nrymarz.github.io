@@ -1,5 +1,4 @@
 import Form from 'react-bootstrap/Form'
-import Button from 'react-bootstrap/Button'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 export default function SearchProductsForm({query,setQuery}){
@@ -18,11 +17,6 @@ export default function SearchProductsForm({query,setQuery}){
                     >
                     </Form.Control>
                 </Col>
-
-                <Col style={{maxWidth:'100px'}}>
-                    <Button className="w-100" onClick={searchProduct}>Search</Button>
-                </Col>
-
             </Form.Group>
         </Form>
     )
