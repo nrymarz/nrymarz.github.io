@@ -1,0 +1,10 @@
+body{
+  background:rgb(240,240,240);
+}
+.card:hover{
+  background:rgb(230,230,230);
+}
+.App {
+  text-align: center;
+}
+
