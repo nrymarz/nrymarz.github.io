@@ -65,7 +65,7 @@ function App() {
         </Nav>
       </Navbar>
 
-      <Alert show={user.ordered} variant='success' className='text-center m-2'>
+      <Alert show={user.ordered === true} variant='success' className='text-center m-2'>
         <Alert.Heading>Order Successful</Alert.Heading>
       </Alert>
 
