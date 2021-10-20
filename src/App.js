@@ -61,7 +61,9 @@ function App() {
             <Nav.Link href="/login">Log In</Nav.Link>
           }
           <Nav.Link href='/products'>Products</Nav.Link>
-          <Nav.Link href="/cart">Cart{user.cart.length > 0 ? `(${user.cart.length})` : null }</Nav.Link>
+          <div className="d-flex g-0">
+            <Nav.Link style={{paddingRight:0}} href="/cart">Cart</Nav.Link><Navbar.Text>{user.cart.length > 0 ? "(" + user.cart.length + ")": null}</Navbar.Text>
+          </div>
         </Nav>
       </Navbar>
 
